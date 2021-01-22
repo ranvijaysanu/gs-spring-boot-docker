@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ranvijaysanugsspringbootdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ranvijaysanugsspringbootdocker
+  template:
+    metadata:
+      labels:
+        app: ranvijaysanugsspringbootdocker 
+    spec:
+      containers:
+        - name: ranvijaysanugsspringbootdocker 
+          image: mycra34.azurecr.io/ranvijaysanugsspringbootdocker
+          ports:
+          - containerPort: 80
